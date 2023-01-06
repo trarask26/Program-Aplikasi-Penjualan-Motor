@@ -1,4 +1,4 @@
-.model small
+ .model small
 .code
 org 100h
 start:
@@ -27,7 +27,7 @@ daftar	db '|--|--------------------|-----------------|--------------------|',13,
 	db '|--|--------------------|-----------------|--------------------|',13,10
 	db '|07|       BEBEK	    |       2022      |  Rp 23.877.000     |',13,10
 	db '|--|--------------------|-----------------|--------------------|',13,10
-	db '|--| TENTUKAN PILIHAN MOTOR YANG ANDA INGINKAN SESUAI NO TABEL |'.13,10
+	db '|--| TENTUKAN PILIHAN MOTOR YANG ANDA INGINKAN SESUAI NO TABEL |',13,10
 	db '|--|--------------------|-----------------|--------------------|','$'
 
 error	    db 13,10,'KODE YANG ANDA MASUKKAN SALAH $'
@@ -67,7 +67,7 @@ error_msg:
 
 proses:
 	mov ah,09
-	mov dx,offset pilih_baris
+	mov dx,offset pilih_brs
 	int 21h
 
 	mov ah,1
